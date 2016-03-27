@@ -6,7 +6,7 @@ body {
   text-align: center;
   font-family: Helvetica, sans-serif;
 }
-
+/*
 #blue-track {
   position: absolute;
   top: 15%;
@@ -21,30 +21,38 @@ body {
   left: 5%;
   width: 1000px;
   height: 100px;
-}
+}*/
 
 #blue-dot {
   position: absolute;
   top: 15%;
   left: 10%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 #red-dot {
   position: absolute;
   top: 30%;
   left: 10%;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+#yellow-dot {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
 }
 
 img {
-  opacity: .8;
+  opacity: .7;
 }
 
 .btn {
   position: fixed;
-  top: 90%;
+  top: 70%;
   width: 100px;
 }
