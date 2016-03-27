@@ -1,42 +1,35 @@
 $(document).on("ready", function() {
 
+  var $reddot = $('#red-dot');
+  var $bluedot = $('#blue-dot');
+  var redPos = $reddot.position();
+  var bluePos = $bluedot.position();
+
   $(document).on("keydown", function(e) {
-    var $reddot = $('#red-dot');
-    var $bluedot = $('#blue-dot');
-    var $yellowdot =$('#yellow-dot');
+
+    // var $yellowdot =$('#yellow-dot');
+
     // move blue dot right with p key
     if (e.keyCode === 80) {
 
       $bluedot.animate({
         'left': '+=40px',
-        // 'width': 'toggle',
-        'height': 'toggle',
+        // 'height': 'toggle',
       }, 200);
-
+      console.log(bluePos);
     }
     // move red dot right with q key
     else if (e.keyCode === 81) {
       $reddot.animate({
         'left': '+=40px',
-        'width': 'toggle',
-        // 'height': 'toggle',
+        // 'width': 'toggle',
       }, 200);
+      console.log(redPos);
     }
-
-    else if (e.keyCode === 90) {
-      $yellowdot.animate({
-        'left': '+=40px',
-        'width': 'toggle',
-        'height': 'toggle',
-      }, 200);
-    }
-
   });
 
-  var redWidth = $reddot.width();
-  var blueWidth = $bluedot.width();
 
-    //width of dot
+
 
 
 
