@@ -1,17 +1,50 @@
+body {
 
+}
 
-.text-center {
+.text {
   text-align: center;
+  font-family: Helvetica, sans-serif;
 }
 
-.starting-line {
-  background-color: black;
-/* position: absolute;  */
-/* start 10% or so left */
-
+#blue-track {
+  position: absolute;;
+  top: 15%;
+  left: 5%;
+  width: 1000px;
+  height: 100px;
 }
 
-.finish-line {
-  background-color: black;
-/* position: absolute; */
+#red-track {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 1000px;
+  height: 100px;
+}
+
+#blue-dot {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+}
+
+#red-dot {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+}
+
+img {
+  opacity: .8;
+}
+
+.btn {
+  position: fixed;
+  top: 90%;
+  width: 100px;
 }

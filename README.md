@@ -3,6 +3,10 @@ Racing Game
 
 Technologies Used
 <!-- What technologies did you use to develop this project? (bullet points) -->
+-HTML
+-CSS
+-javascript
+-JQuery
 
 Existing Features
 <!-- What features does your racing game have? (bullet points) -->
