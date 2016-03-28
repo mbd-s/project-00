@@ -13,11 +13,11 @@ $(document).on("ready", function() {
       if ((bluePos >= finishLine) || (redPos >= finishLine)) {
         if (bluePos > redPos) {
           $("#results-box").text("Blue wins!");
-          //set background color to blue?
+          $("#results-box").css(color, blue);
           }
         else if (redPos > bluePos) {
           $("#results-box").text("Red wins!");
-
+          $("#results-box").css(color, red);
           }
         else {
           $("#results-box").text("Tie game!");
@@ -32,7 +32,7 @@ $(document).on("ready", function() {
           (bluePos < finishLine)) {
             $bluedot.animate({
               'left': '+=70px',
-              'height': 'toggle',
+              // 'height': 'toggle',
             }, 200);
       }
       // if the q key is clicked and the red dot hasn't reached the finish line,
@@ -41,7 +41,7 @@ $(document).on("ready", function() {
           (redPos < finishLine)) {
             $reddot.animate({
               'left': '+=70px',
-              'width': 'toggle',
+              // 'width': 'toggle',
             }, 200);
       }
   });
