@@ -14,22 +14,50 @@ $(document).on("ready", function() {
       $results.text("");
       if (($bluePos >= $finishLine) || ($redPos >= $finishLine)) {
         if ($bluePos > $redPos) {
+          $bluedot.animate({
+            'width': '+=2000px',
+            'height': '+=2000px',
+          }, 1500);
+          $reddot.animate({
+            'left': '-=1000',
+            'width': 'toggle',
+            'height': 'toggle',
+          }, 900);
           $results.text("Blue wins!");
           $results.css("color", "blue");
           }
         else if ($redPos > $bluePos) {
+          $reddot.animate({
+            'width': '+=2000px',
+            'height': '+=2000px',
+          }, 1500);
+          $bluedot.animate({
+            'left': '-=1000',
+            'width': 'toggle',
+            'height': 'toggle',
+          }, 900);
           $results.text("Red wins!");
           $results.css("color", "red");
           }
         else {
           $results.text("Tie game!");
+          $bluedot.animate({
+            'left': '-=1000',
+            'width': 'toggle',
+            'height': 'toggle',
+          }, 900);
+          $reddot.animate({
+            'left': '-=1000',
+            'width': 'toggle',
+            'height': 'toggle',
+          }, 900);
         }
         $(document).unbind(event);
+        $(button).show();
     }
   }
   checkWinner();
-      // if the p key is clicked and the blue dot hasn't reached the finish line,
-      // move the blue dot right
+
       if ((event.keyCode === 80) &&
           ($bluePos < $finishLine)) {
             $bluedot.animate({
@@ -37,8 +65,6 @@ $(document).on("ready", function() {
               // 'height': 'toggle',
             }, 200);
       }
-      // if the q key is clicked and the red dot hasn't reached the finish line,
-      // move the red dot right
       else if ((event.keyCode === 81) &&
           ($redPos < $finishLine)) {
             $reddot.animate({

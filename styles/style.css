@@ -26,15 +26,22 @@ img {
 }
 
 #track {
-  width: 1100px;
+  width: 1020px;
 }
 
 #results-box {
 font-size: 20px;
 }
 
-.btn {
-  top: 350px;;
+#winners-circle {
+  position: absolute;
+  width: 75px;
+  height: 1000px;
+  left: 1200px;
+}
+
+/*.btn {
+  top: 500px;;
   width: 100px;
   text-align: center;
-}
+}*/
