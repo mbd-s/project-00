@@ -15,7 +15,7 @@ Existing Features
 -winner announcements
 
 Planned Features
--a working refresh button
+-a less glitchy refresh button
 -target areas for dots to land on rather than a finish line
 -smoother movements
 -Make the JS animation more concise
