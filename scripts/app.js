@@ -54,19 +54,21 @@ $(document).on('ready', function() {
             'height': 'toggle',
           }, 900);
         }
-        $(document).unbind(event);
+
     }
   }
   checkWinner();
 function startGame(){
       if ((event.keyCode === 80) &&
-          ($bluePos < $finishLine)) {
+          ($bluePos < $finishLine) &&
+          ($redPos < $finishLine)) {
             $bluedot.animate({
               'left': '+=70px',
               'width': 'toggle',
             }, 200);
       }
       else if ((event.keyCode === 81) &&
+          ($bluePos < $finishLine) &&
           ($redPos < $finishLine)) {
             $reddot.animate({
               'left': '+=70px',
@@ -77,12 +79,11 @@ function startGame(){
   startGame();
   });
 
-  // $('.btn').on('click', function(event) {
-  //   alert("Sorry for the bug. Refresh the page for a new game.");
-  //   $bluedot.removeAttr('style');
-  //   $reddot.removeAttr('style');
-  //   // listen for keydowns again
-  //   startGame();
-  // });
+  $('.btn').on('click', function(event) {
+    $bluedot.removeAttr('style');
+    $reddot.removeAttr('style');
+    // listen for keydowns again
+    startGame();
+  });
 
 });
