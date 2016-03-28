@@ -1,19 +1,20 @@
 Racing Game
-<!-- Short explanation of the project (1-2 sentences) - what is the goal of the project and/or main functionality? -->
+Dot racer is a simple racing game between two colored dots.
 
 Technologies Used
-<!-- What technologies did you use to develop this project? (bullet points) -->
+
 -HTML
 -CSS
--javascript
+-Javascript
 -JQuery
+-Bootstrap
 
 Existing Features
-<!-- What features does your racing game have? (bullet points) -->
+-game play for two players
+-animated movements
+-winner announcements
 
 Planned Features
-<!-- What changes would you make to your project if you continue to work on it? (bullet points) -->
-
-<!-- Screenshot (optional) -->
-
-<!-- Link to hosted project on GitHub pages or BitBalloon (optional) -->
+-target areas for dots to land on rather than a finish line
+-smoother movements
+-Make the JS animation more concise

@@ -2,7 +2,12 @@ body {
   background-color: #fbfbff;
   text-align: center;
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
+
+}
+
+#name-of-the-game {
+  font-weight: bolder;
+  font-size: 35px;
 }
 
 img {
@@ -35,13 +40,15 @@ font-size: 20px;
 
 #winners-circle {
   position: absolute;
-  width: 75px;
+  width: 60px;
   height: 1000px;
   left: 1200px;
 }
 
-/*.btn {
-  top: 500px;;
-  width: 100px;
-  text-align: center;
-}*/
+.btn {
+  position: fixed;
+  top: 500px;
+  left: 50px;
+  margin-top: 10px;
+  font-size: 20px;
+}
