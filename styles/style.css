@@ -1,10 +1,8 @@
 body {
-  background-color: #fbfbff
-}
-
-.text {
+  background-color: #fbfbff;
   text-align: center;
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 img {
@@ -13,7 +11,7 @@ img {
 
 #blue-dot {
   position: absolute;
-  top: 50px;
+  top: 125px;
   left: 50px;
   width: 250px;
   height: 250px;
@@ -21,26 +19,22 @@ img {
 
 #red-dot {
   position: absolute;
-  top: 150px;
+  top: 200px;
   left: 50px;
   width: 250px;
   height: 250px;
 }
 
 #track {
-
-  width: 1300px;
-
-
+  width: 1100px;
 }
 
 #results-box {
-
+font-size: 20px;
 }
 
 .btn {
-  position: fixed;
-  top: 600px;
-  left: 50px;
+  top: 350px;;
   width: 100px;
+  text-align: center;
 }
