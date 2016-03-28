@@ -76,6 +76,7 @@ function startGame(){
   });
 
   $('.btn').on('click', function(event) {
+    alert("Sorry for the bug. You might need to refresh the page.");
     $bluedot.removeAttr('style');
     $reddot.removeAttr('style');
     $(document).bind(event);
