@@ -1,5 +1,5 @@
 body {
-
+  background-color: #fbfbff
 }
 
 .text {
@@ -13,36 +13,28 @@ img {
 
 #blue-dot {
   position: absolute;
-  top: 15%;
-  left: 10%;
+  top: 100px;
+  left: 50px;
   width: 250px;
   height: 250px;
 }
 
 #red-dot {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 200px;
+  left: 50px;
   width: 250px;
   height: 250px;
 }
 
-/*#yellow-dot {
-  position: absolute;
-  top: 45%;
-  left: 10%;
-  width: 200px;
-  height: 200px;
-}*/
-
-#finish-line {
-  position: absolute;
-  border-left: dashed 2px;
-  left: 50%;
+#track {
+  position: fixed;
+  width: 1300px;
+  height: 500px;
+  top: 100px;
 }
 
 .btn {
   position: fixed;
-  top: 70%;
   width: 100px;
 }

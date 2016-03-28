@@ -1,36 +1,48 @@
 $(document).on("ready", function() {
 
-  var $reddot = $('#red-dot');
   var $bluedot = $('#blue-dot');
-  var redPos = $reddot.position();
-  var bluePos = $bluedot.position();
+  var $reddot = $('#red-dot');
 
-  $(document).on("keydown", function(e) {
+  $(document).on("keydown", function(event) {
 
-    // var $yellowdot =$('#yellow-dot');
+    var bluePos = $bluedot.offset().left;
+    var redPos = $reddot.offset().left;
+    var finishLine = ($('#track').width()-200);
 
-    // move blue dot right with p key
-    if (e.keyCode === 80) {
+    function checkWinner() {
+      if ((bluePos >= finishLine) || (redPos >= finishLine)) {
+        if (bluePos > redPos) {
+          $("#results-box").text("Blue wins!");
+          //set background color to blue?
+          }
+        else if (redPos > bluePos) {
+          $("#results-box").text("Red wins!");
 
-      $bluedot.animate({
-        'left': '+=40px',
-        // 'height': 'toggle',
-      }, 200);
-      console.log(bluePos);
+          }
+        else {
+          $("#results-box").text("Tie game!");
+        }
+        $(document).unbind(event);
     }
-    // move red dot right with q key
-    else if (e.keyCode === 81) {
-      $reddot.animate({
-        'left': '+=40px',
-        // 'width': 'toggle',
-      }, 200);
-      console.log(redPos);
-    }
+  }
+  checkWinner();
+      // if the p key is clicked and the blue dot hasn't reached the finish line,
+      // move the blue dot right
+      if ((event.keyCode === 80) &&
+          (bluePos < finishLine)) {
+            $bluedot.animate({
+              'left': '+=70px',
+              'height': 'toggle',
+            }, 200);
+      }
+      // if the q key is clicked and the red dot hasn't reached the finish line,
+      // move the red dot right
+      else if ((event.keyCode === 81) &&
+          (redPos < finishLine)) {
+            $reddot.animate({
+              'left': '+=70px',
+              'width': 'toggle',
+            }, 200);
+      }
   });
-
-
-
-
-
-
 });
