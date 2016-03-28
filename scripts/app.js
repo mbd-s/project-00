@@ -15,8 +15,9 @@ $(document).on('ready', function() {
       if (($bluePos >= $finishLine) || ($redPos >= $finishLine)) {
         if ($bluePos > $redPos) {
           $bluedot.animate({
-            'width': '+=2000px',
-            'height': '+=2000px',
+            'left': '-=200',
+            'width': '+=5000px',
+            'height': '+=5000px',
           }, 1500);
           $reddot.animate({
             'left': '-=1000',
@@ -28,8 +29,9 @@ $(document).on('ready', function() {
           }
         else if ($redPos > $bluePos) {
           $reddot.animate({
-            'width': '+=2000px',
-            'height': '+=2000px',
+            'left': '-=200',
+            'width': '+=5000px',
+            'height': '+=5000px',
           }, 1500);
           $bluedot.animate({
             'left': '-=1000',
@@ -56,7 +58,7 @@ $(document).on('ready', function() {
     }
   }
   checkWinner();
-
+function startGame(){
       if ((event.keyCode === 80) &&
           ($bluePos < $finishLine)) {
             $bluedot.animate({
@@ -69,10 +71,15 @@ $(document).on('ready', function() {
               'left': '+=70px',
             }, 200);
       }
+  }
+  startGame();
   });
 
-  $('.btn').on('click', function(event){
-    alert("test");
+  $('.btn').on('click', function(event) {
+    $bluedot.removeAttr('style');
+    $reddot.removeAttr('style');
+    $(document).bind(event);
+    startGame();
   });
 
 });
