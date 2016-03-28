@@ -63,24 +63,26 @@ function startGame(){
           ($bluePos < $finishLine)) {
             $bluedot.animate({
               'left': '+=70px',
+              'width': 'toggle',
             }, 200);
       }
       else if ((event.keyCode === 81) &&
           ($redPos < $finishLine)) {
             $reddot.animate({
               'left': '+=70px',
+              'height': 'toggle',
             }, 200);
       }
   }
   startGame();
   });
 
-  $('.btn').on('click', function(event) {
-    alert("Sorry for the bug. You might need to refresh the page.");
-    $bluedot.removeAttr('style');
-    $reddot.removeAttr('style');
-    $(document).bind(event);
-    startGame();
-  });
+  // $('.btn').on('click', function(event) {
+  //   alert("Sorry for the bug. Refresh the page for a new game.");
+  //   $bluedot.removeAttr('style');
+  //   $reddot.removeAttr('style');
+  //   // listen for keydowns again
+  //   startGame();
+  // });
 
 });
